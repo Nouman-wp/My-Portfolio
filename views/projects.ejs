@@ -1,0 +1,22 @@
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+
+<div class="projects-container">
+  <h1>🚀 My Projects</h1>
+  <div class="project-grid">
+    <% projects.forEach(project => { %>
+      <div class="project-card">
+        <img src="<%= project.image %>" alt="<%= project.title %> screenshot">
+        <h2><%= project.title %></h2>
+        <p><%= project.description %></p>
+        <p><strong>Tech Stack:</strong> <%= project.techStack %></p>
+        <div class="project-links">
+          <a href="<%= project.github %>" target="_blank">GitHub</a>
+          <a href="<%= project.live %>" target="_blank">Live Demo</a>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include("partials/footer") %>

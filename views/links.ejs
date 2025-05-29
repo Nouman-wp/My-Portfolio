@@ -1,0 +1,13 @@
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+
+<div class="links-container">
+  <h1>🔗 My Links</h1>
+  <ul class="links-list">
+    <% links.forEach(link => { %>
+      <li><a href="<%= link.url %>" target="_blank"><%= link.name %></a></li>
+    <% }) %>
+  </ul>
+</div>
+
+<%- include("partials/footer") %>

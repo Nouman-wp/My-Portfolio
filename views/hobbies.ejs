@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+
+<div class="hobbies-container">
+  <h1>🎮 My Hobbies</h1>
+  <div class="hobbies-list">
+    <% hobbies.forEach(hobby => { %>
+      <div class="hobby-card">
+        <img src="<%= hobby.imageUrl %>" alt="<%= hobby.name %>" class="hobby-image">
+        <h2><%= hobby.name %></h2>
+        <p><%= hobby.description %></p>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include("partials/footer") %>

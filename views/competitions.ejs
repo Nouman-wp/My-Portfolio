@@ -1,0 +1,18 @@
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+
+<div class="competitions-container">
+  <h1>🏆 Competitions & Hackathons</h1>
+  <div class="competitions-list">
+    <% competitions.forEach(comp => { %>
+      <div class="competition-card">
+        <h2><%= comp.name %></h2>
+        <p><strong>Date:</strong> <%= comp.date %></p>
+        <p><strong>Description:</strong> <%= comp.description %></p>
+        <a href="<%= comp.link %>" target="_blank" class="competition-link">Learn More</a>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include("partials/footer") %>
